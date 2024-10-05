@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <title>PROYECTO W - Banco W</title>
+</head>
+<body>
+    <header class="fixed-header">
+        <img src="https://www.bancow.com.co/wp-content/uploads/2017/06/hito-2017-banco-w.png" alt="Logo Banco W" class="logo-image">
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="servicios.html">Servicios</a></li>
+                <li><a href="#">Acerca de</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </nav>
+        <button class="cta-button">Únete a Proyecto W</button>
+    </header>
+
+    <main class="main-content">
+        <section class="hero">
+            <div class="slideshow-container">
+                <img src="https://www.bancow.com.co/wp-content/uploads/2024/10/Banner_club_de_ahorro.png" alt="Banner 1" class="hero-image">
+                <img src="https://www.bancow.com.co/wp-content/uploads/2024/09/Banner-Home-Desk-Provisional.png" alt="Banner 2" class="hero-image">
+                <img src="Screenshot 2024-10-05 at 5.02.27 AM.png" alt="Banner 3" class="hero-image">
+            </div>
+            <div class="learn-more-container">
+                <button id="learnMore">Conoce más</button>
+            </div>
+        </section>
+
+        <aside class="sidebar">
+            <div class="sidebar-card">
+                <img src="Screenshot 2024-10-05 at 5.02.27 AM.png" alt="Logo Proyecto W" class="logo-sidebar">
+                <h3>PROYECTO W</h3>
+                <h4>Se parte de la comunidad del Ahorro</h4>
+                <p>Únete a nosotros para disfrutar de beneficios exclusivos y oportunidades de crecimiento.</p>
+                <div class="buttons-container">
+                    <button id="cortoPlazoBtn" class="animated-button">Ver servicios de Corto Plazo</button>
+                    <button id="largoPlazoBtn" class="animated-button">Ver servicios de Largo Plazo</button>
+                </div>
+            </div>
+        </aside>
+        
+        
+        <section class="services">
+            <!-- Div que se mostrará para servicios de Corto Plazo -->
+            <div id="infoCortoPlazo" class="info" style="display: none;">
+                <h4>Servicios a Corto Plazo:</h4>
+                <p>Generar incentivos por un sistema de referidos.</p>
+                <p>Impulso creativo en redes sociales.</p>
+                <p>Charla para jóvenes sobre educación financiera.</p>
+            </div>
+
+            <!-- Div que se mostrará para servicios de Largo Plazo -->
+            <div id="infoLargoPlazo" class="info" style="display: none;">
+                <h4>Servicios a Largo Plazo:</h4>
+                <p>Incubadora de emprendimientos.</p>
+                <p>Alianzas con microempresas.</p>
+            </div>
+
+            <div class="service-category">
+                <h3>Otras</h3>
+                <p>Aquí puedes incluir otros servicios o iniciativas que el Banco W desea ofrecer.</p>
+            </div>
+            
+            <div class="button-container">
+                <button onclick="window.location.href='index.html'">Volver a los servicios</button>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2024 Banco W. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        // JavaScript para alternar entre las secciones de servicios
+        document.getElementById('cortoPlazoBtn').addEventListener('click', function() {
+            document.getElementById('infoCortoPlazo').style.display = 'block';
+            document.getElementById('infoLargoPlazo').style.display = 'none';
+        });
+
+        document.getElementById('largoPlazoBtn').addEventListener('click', function() {
+            document.getElementById('infoLargoPlazo').style.display = 'block';
+            document.getElementById('infoCortoPlazo').style.display = 'none';
+        });
+    </script>
+</body>
+</html>

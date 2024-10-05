@@ -1,0 +1,636 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    display: flex;
+    flex-direction: column; /* Permitir flexibilidad vertical */
+}
+
+header {
+    background-color: #4C9BBE; /* Turquesa */
+    color: white;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.logo-image {
+    max-height: 100px; /* Ajustar tamaño del logo */
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-left: 30px;
+}
+
+nav ul li a {
+    color: black;
+    text-decoration: none;
+    font-size: 16px; /* Aumentar tamaño de fuente */
+}
+
+.sidebar {
+    background-color: #EA6A25; /* Naranja */
+    padding: 20px; /* Espacio adicional */
+    width: 180px; /* Ancho de la barra lateral */
+    background-image: url(); /* Ruta de tu imagen */
+    background-size: cover; /* Cubrir toda el área */
+    background-repeat: no-repeat; /* No repetir la imagen */
+    background-position: center; /* Centrar la imagen */
+    color: white; /* Cambiar color del texto */
+}
+
+.sidebar h2 {
+    color: white; /* Color del encabezado */
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li a {
+    color: white; /* Color de los enlaces */
+    text-decoration: none; /* Sin subrayado */
+}
+
+.services {
+    padding: 20px;
+    text-align: center; /* Centrar el contenido de la sección */
+}
+
+.services h2 {
+    margin-bottom: 20px; /* Espacio inferior */
+    font-size: 24px; /* Ajustar el tamaño de fuente si es necesario */
+    color: #4C9BBE; /* Color del texto (opcional) */
+}
+
+.hero {
+    position: relative; /* Necesario para posicionar las imágenes del slideshow */
+    overflow: hidden; /* Ocultar cualquier parte de las imágenes que sobresalga */
+    text-align: center; /* Centrar texto */
+    color: black; /* Color del texto */
+}
+
+.slideshow-container {
+    max-width: 100%; /* Asegura que el slideshow no exceda el ancho de la página */
+    position: relative; /* Posiciona el contenedor para las imágenes */
+}
+
+.mySlides {
+    display: none; /* Ocultar todas las imágenes por defecto */
+}
+
+.hero-image {
+    width: 100%; /* Hacer que las imágenes ocupen todo el ancho */
+    height: auto; /* Mantener la relación de aspecto */
+}
+
+.hero h1 {
+    margin: 20px 0; /* Espacio entre el título y el párrafo */
+}
+
+.hero p {
+    margin: 10px 0; /* Espacio entre el párrafo y el botón */
+}
+
+.hero button {
+    background-color: #EA6A25; /* Color del botón */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.hero button:hover {
+    background-color: #d55a1a; /* Un tono más oscuro al pasar el mouse */
+}
+
+.learn-more-container {
+    text-align: center; /* Centrar el botón */
+    margin: 30px 0; /* Espacio superior e inferior */
+}
+
+.learn-more-container button {
+    background-color: #EA6A25; /* Color del botón */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 16px; /* Ajustar tamaño de fuente */
+}
+
+.learn-more-container button:hover {
+    background-color: #d55a1a; /* Un tono más oscuro al pasar el mouse */
+}
+
+.payment-icon-container {
+    display: flex; /* Usar flexbox para centrar el contenido */
+    align-items: center; /* Centrar verticalmente */
+    justify-content: center; /* Centrar horizontalmente */
+    margin: 20px 0; /* Espacio superior e inferior */
+}
+
+.payment-icon {
+    display: flex; /* Usar flexbox para centrar el ícono */
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente */
+    width: 60px; /* Ajustar ancho del contenedor */
+    height: 60px; /* Ajustar altura del contenedor */
+    border-radius: 50%; /* Hacer el contenedor circular */
+    background-color: white; /* Color de fondo blanco */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Sombra opcional */
+    margin-right: 10px; /* Espacio entre el ícono y el texto */
+}
+
+.pse-icon {
+    width: 40px; /* Ajustar el tamaño del ícono */
+    height: auto; /* Mantener proporciones del ícono */
+}
+
+.payment-button {
+    background-color: #7E57C2; /* Color púrpura */
+    color: white; /* Color del texto */
+    border-radius: 5px; /* Bordes redondeados */
+    padding: 10px 20px; /* Espacio interno */
+    font-size: 18px; /* Tamaño de fuente */
+    display: flex; /* Usar flexbox para centrar el texto */
+    align-items: center; /* Centrar verticalmente */
+    justify-content: center; /* Centrar horizontalmente */
+    margin-left: 10px; /* Espacio entre ícono y texto */
+    transition: background-color 0.3s; /* Transición para el color del botón */
+}
+
+.payment-button:hover {
+    background-color: #6a4f9c; /* Color más oscuro al pasar el mouse */
+}
+
+.services {
+    padding: 20px;
+}
+
+.service-grid {
+    display: flex;
+    flex-wrap: wrap; /* Permitir que las tarjetas se muevan a la siguiente fila */
+    justify-content: space-around; /* Espaciado entre elementos */
+}
+
+.service-card {
+    background-color: #F5F5F5; /* Fondo claro para cada tarjeta */
+    border: 1px solid #7E57C2; /* Bordes color púrpura */
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    width: 250px; /* Ancho fijo para cada tarjeta */
+    margin: 10px; /* Margen entre tarjetas */
+    cursor: pointer; /* Cambiar el cursor al pasar por encima */
+    transition: transform 0.2s; /* Añadir efecto de transformación */
+}
+
+.service-card:hover {
+    transform: scale(1.05); /* Efecto al pasar el cursor */
+}
+
+.service-icon {
+    width: 100px; /* Tamaño del icono aumentado */
+    height: auto;
+}
+
+.service-card h3 {
+    margin: 20px 0; /* Margen en la parte superior e inferior del título */
+}
+
+.service-card button {
+    background-color: #EA6A25; /* Color Naranja */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.service-card button:hover {
+    background-color: #d55a1a; /* Un tono más oscuro al pasar el mouse */
+}
+
+.how-to {
+    padding: 20px;
+    text-align: center;
+    background-color: #F5F5F5; /* Color de fondo claro */
+}
+
+.how-to h2 {
+    margin-bottom: 20px; /* Espacio inferior */
+}
+
+.steps {
+    display: flex;
+    justify-content: space-around; /* Distribuir el espacio entre los pasos */
+}
+
+.step {
+    width: 30%; /* Controlar el ancho de cada paso */
+    text-align: center; /* Centrar el texto */
+}
+
+.step-image {
+    width: 100%; /* Ajustar imagen al 100% del contenedor */
+    border-radius: 10px; /* Bordes redondeados */
+}
+
+footer {
+    background-color: #4C9BBE; /* Turquesa */
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+/* Estilos CSS básicos */
+
+
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Header Styles */
+.fixed-header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color:  #4C9BBE; /* color púrpura similar a Nubank */
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em 2em;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.logo-image {
+    max-width: 120px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5em;
+    padding: 0;
+    margin: 0;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.cta-button {
+    background-color: white;
+    color:  #4C9BBE;
+    padding: 0.5em 1em;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* Main Content Styles */
+.main-content {
+    padding: 7em 2em 2em;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    background-color: #f9f9f9;
+    padding: 3em 0;
+}
+
+.hero-image {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.learn-more-container {
+    margin-top: 1.5em;
+}
+
+/* Sidebar Styles */
+.sidebar {
+    background-color: #ffffff;
+    padding: 2em;
+    margin-bottom: 2em;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    text-align: center;
+}
+
+.logo-sidebar {
+    width: 100px;
+    margin-bottom: 1em;
+}
+
+/* Service Section */
+.services {
+    padding: 2em;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    margin-bottom: 2em;
+}
+
+.service-category {
+    margin-top: 2em;
+}
+
+/* Botones animados para Corto y Largo Plazo */
+.animated-button {
+    background-color:  #4C9BBE;
+    color: #fff;
+    padding: 0.8em 1.5em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    margin-top: 1em;
+}
+
+.animated-button:hover {
+    background-color:  #4C9BBE;
+}
+
+/* Estilo de las secciones que se mostrarán/ocultarán */
+.info {
+    margin-top: 2em;
+    padding: 1em;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+.button-container {
+    margin-top: 2em;
+}
+
+/* Footer */
+footer {
+    background-color: #6200ea;
+    color: white;
+    text-align: center;
+    padding: 1.5em 0;
+    margin-top: 3em;
+}
+
+/* Responsive Design */
+@media (max-width: 730px) {
+    .fixed-header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 0.5em;
+    }
+
+    .hero-image {
+        max-height: 250px;
+    }
+
+    .sidebar,
+    .services {
+        margin-left: 1em;
+        margin-right: 1em;
+    }
+}
+
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f4f4f4;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+}
+
+/* Main Content Styles */
+.main-content {
+    width: 100%;
+    max-width: 1200px; /* Limitar el ancho para pantallas grandes */
+    padding: 2em;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    background-color: #f9f9f9;
+    padding: 3em 0;
+}
+
+.hero-image {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Sidebar Styles */
+.sidebar {
+    background-color: #ffffff;
+    width: 90%;
+    max-width: 400px; /* Limitar el ancho del aside */
+    margin: 0 auto;
+    padding: 2em;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    text-align: center;
+}
+
+.logo-sidebar {
+    width: 80%;
+    margin-bottom: 1.5em;
+    border-radius: 10px; /* Añadir bordes redondeados a la imagen */
+}
+
+/* Botones animados para Corto y Largo Plazo */
+.animated-button {
+    background-color: #4C9BBE;
+    color: #fff;
+    padding: 0.8em 1.5em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    margin-top: 1em;
+}
+
+.animated-button:hover {
+    background-color:  #4C9BBE;
+}
+
+/* Footer */
+footer {
+    background-color:  #4C9BBE;
+    color: white;
+    text-align: center;
+    padding: 1.5em 0;
+    margin-top: 3em;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-image {
+        max-height: 250px;
+    }
+
+    .sidebar {
+        width: 95%;
+        padding: 1.5em;
+    }
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+}
+
+.sidebar {
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 350px; /* Ajustar el ancho del contenedor */
+    margin: 1em auto; /* Reducir márgenes superiores e inferiores */
+    padding: 1.5em; /* Reducir padding para hacerlo más compacto */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    text-align: center;
+}
+
+.logo-sidebar {
+    width: 70%; /* Reducir el tamaño de la imagen para hacer el cuadro más pequeño */
+    max-width: 250px; /* Limitar el ancho de la imagen */
+    margin-bottom: 0.5em; /* Reducir el margen inferior de la imagen */
+    border-radius: 10px;
+}
+
+.buttons-container {
+    margin-top: 0.5em; /* Reducir el margen superior para acercar los botones a la imagen */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5em; /* Espacio entre los botones */
+}
+
+/* Botones animados */
+.animated-button {
+    background-color: #4C9BBE;
+    color: #fff;
+    padding: 0.6em 1.2em; /* Reducir el padding para botones más compactos */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    width: calc(100% - 2em); /* Ajustar el ancho del botón con un pequeño margen */
+}
+
+.animated-button:hover {
+    background-color: #357680; /* Un tono más oscuro al pasar el cursor */
+}
+
+.buttons-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 90%;
+        padding: 1.5em;
+    }
+
+    .animated-button {
+        width: 90%; /* Ajustar el ancho del botón en pantallas más pequeñas */
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px); /* Comienza un poco más abajo */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); /* Llega a su posición original */
+    }
+}
+
+/* Aplicar la animación a la sección "Otras" */
+.service-category {
+    animation: fadeInUp 1s ease-out;
+    margin-top: 2em;
+    padding: 1em;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Aplicar la animación al contenedor del botón */
+.button-container {
+    margin-top: 2em;
+    text-align: center;
+    animation: fadeInUp 1.2s ease-out; /* Animación con un ligero retraso */
+}
+
+/* Estilo del botón "Volver a los servicios" */
+.button-container button {
+    background-color: #4C9BBE;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.button-container button:hover {
+    background-color: #357680; /* Cambiar el color al pasar el cursor */
+}

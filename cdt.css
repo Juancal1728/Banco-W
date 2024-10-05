@@ -1,0 +1,52 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    display: flex; /* Permitir disposición flex */
+}
+
+h1 {
+    color: #4C9BBE; /* Color para el título de la página */
+    text-align: center; /* Centrar el título */
+}
+
+.services {
+    padding: 20px;
+    text-align: left; /* Alinear el texto a la izquierda */
+}
+
+.service-category {
+    margin-bottom: 30px; /* Espacio entre categorías */
+    background-color: #f9f9f9; /* Fondo claro para destacar */
+    border: 1px solid #ccc; /* Borde ligero */
+    border-radius: 5px; /* Bordes redondeados */
+    padding: 15px; /* Espacio interno */
+}
+
+.service-category h3 {
+    color: #4C9BBE; /* Color para los títulos de categoría */
+}
+
+.service-category p {
+    margin: 10px 0; /* Espacio entre párrafos */
+}
+
+.button-container {
+    text-align: center; /* Centrar el botón */
+    margin-top: 20px; /* Espacio superior */
+}
+
+button {
+    background-color: #EA6A25; /* Color del botón */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #d55a1a; /* Un tono más oscuro al pasar el mouse */
+}
